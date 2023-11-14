@@ -1,8 +1,10 @@
 {
-    "files.associations": {
-        ".css": "tailwindcss",
-        "stdlib.h": "c",
-        "memory.h": "c",
-        "common.h": "c"
-    }
+	"files.associations": {
+		".css": "tailwindcss",
+		"stdlib.h": "c",
+		"memory.h": "c",
+		"common.h": "c",
+		"value.h": "c",
+		"debug.h": "c"
+	}
 }
