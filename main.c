@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string>
 
 #include "common.h"
 #include "chunk.h"
@@ -21,18 +20,6 @@ static void repl()
 
         interpret(line);
     }
-}
-
-static void runFile(const char *path)
-{
-    char *source = readFile(path);
-    InterpretResult result = interpret(source);
-    free(source);
-
-    if (result == INTERPRET_COMPILE_ERROR)
-        exit(65);
-    if (result == INTERPRET_RUNTIME_ERROR)
-        exit(78);
 }
 
 static char *readFile(const char *path)
@@ -67,6 +54,18 @@ static char *readFile(const char *path)
 
     fclose(file);
     return buffer;
+}
+
+static void runFile(const char *path)
+{
+    char *source = readFile(path);
+    InterpretResult result = interpret(source);
+    free(source);
+
+    if (result == INTERPRET_COMPILE_ERROR)
+        exit(65);
+    if (result == INTERPRET_RUNTIME_ERROR)
+        exit(78);
 }
 
 int main(int argc, const char *argv[])

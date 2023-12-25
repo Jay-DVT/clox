@@ -9,6 +9,9 @@
 		"stdio.h": "c",
 		"scanner.h": "c",
 		"compiler.h": "c",
-		"vm.h": "c"
+		"vm.h": "c",
+		"type_traits": "c",
+		"xtr1common": "c",
+		"xutility": "c"
 	}
 }
