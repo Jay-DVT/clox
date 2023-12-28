@@ -108,6 +108,10 @@ static void skipWhitespace()
                 return;
             }
             break;
+        case '\n':
+            scanner.line++;
+            advance();
+            break;
         default:
             return;
         }
