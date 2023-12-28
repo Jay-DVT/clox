@@ -48,7 +48,6 @@ void printValue(Value value)
         printObject(value);
         break;
     }
-    printf("%g", AS_NUMBER(value));
 }
 
 bool valuesEqual(Value a, Value b)

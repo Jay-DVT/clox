@@ -34,7 +34,7 @@ static void freeObject(Obj *object)
     }
 }
 
-void freeObjexts()
+void freeObjects()
 {
     Obj *object = vm.objects;
     while (object != NULL)
